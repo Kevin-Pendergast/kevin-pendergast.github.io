@@ -1,0 +1,256 @@
+
+@font-face {
+    font-family: 'Erode';
+    src: url('Erode-Regular.woff') format('woff');
+    font-weight: 400;       
+    font-style: normal;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* BASE STYLES*/
+body {
+    background-color: #353d35;
+    color: #f7efd9;             
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 1000px;
+    padding-top: 150px;
+}
+
+
+/* NORMAL STYLES */
+
+.header {
+    position: fixed; 
+    width: 100%;
+    top: 0px;
+}
+
+.top-bar {
+    background-color: #d3c8a2;
+}
+
+.top-bar__content {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 30px;
+    color: #353d35;
+    font-size: 12px;
+    align-items: center;
+    justify-content: end;
+    column-gap: 20px;
+}
+
+.icon {
+    color: #353d35;
+    margin-right: 3px;
+}
+
+.bottom-bar {
+    
+
+    background-color: #272420;
+
+    width: 100%;
+}
+
+.bottom-bar__content {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 85px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #272420;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+}
+.logo__img {
+    height: clamp(60px, 10vw, 100px); 
+    width: clamp(60px, 10vw, 100px);
+    margin-top: 10px;
+}
+
+.logo__text {
+    color: #f7efd9;
+    font-size: clamp(30px, 5vw, 47px);
+    font-weight: 500;
+    font-family: 'Erode';
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.nav {
+    background-color: #272420;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 40px;
+    margin-top: 12px;
+
+    
+}
+
+
+.nav__item {
+    color: #fff8ec;
+    opacity: 0.75;
+    background-color: #272420;
+}
+
+.nav__item:hover, .nav_item:focus {
+    color: #fff6e8;
+    opacity: 1; 
+}
+.nav__link--active{
+    background-color: #272420;
+    color: #fff8ec;
+    opacity: 1.0;
+    border-bottom: 1px solid #fff8ec;
+    padding-bottom: 4px;
+}
+
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background-color: #f7efd9;   
+    margin: 5px;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out
+
+}
+
+/* FOR JS */
+.nav--open {
+    left: 50% !important;
+}
+
+.hamburger--open .bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger--open .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger--open .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .nav {
+       background-color: #2e3938;
+
+    position: fixed;
+    top: 115px;
+    left: -100%;
+    transform: translateX(-50%);
+    /* background-color: #272420; */
+    
+    width: 100%;
+    padding: 10px 0 25px;
+  }
+ .nav__item {
+    color: #fff8ec;
+    opacity: 0.75;
+       background-color: #2e3938;
+}
+  .nav__list {
+        background-color: #2e3938;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding:0;
+    
+    
+  }
+
+  .nav__link {
+       background-color: #2e3938;
+    font-size: 14px;
+  
+  }
+
+  .nav__link--active, .nav_item:focus, .nav_item {
+       background-color: #2e3938;
+
+    font-size: 14px;
+    
+}
+  .logo {
+    column-gap: 15px; 
+  }
+  .hamburger {
+    display: block;
+   
+  }
+}
+
+@media (max-width: 360px) {
+  .top-bar__content {
+    font-size: 10px;
+  }
+}
+
+
+
+.footer {
+    background-color: #272420;   /* full-width background */
+    width: 100%;
+
+}
+
+.footer__content {
+    max-width: 1600px;
+    margin: 0 auto;              /* centers content */
+    padding: 30px;               /* natural edge spacing */
+    color: #f7efd9;
+    text-align: center;
+}
+
+.grayscale {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+/* Disable grayscale on hover */
+.grayscale:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.apps{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
