@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @font-face {
     font-family: 'Erode';
     src: url('Erode-Regular.woff') format('woff');
@@ -26,10 +26,19 @@ body {
     background-color: #353d35;
     color: #f7efd9;             
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   
-    padding-top: 150px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    
 }
-
+main{
+    flex: 1;
+}
+p{
+    color: #f7efd9;        
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 /* NORMAL STYLES */
 
@@ -141,6 +150,74 @@ body {
 
 }
 
+/*Comp Reel*/
+.ratio{
+    margin-top: -50px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+/* Helicopter Run */
+.helicopter {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #21111e;
+    padding: 15px;
+    width: 500px;
+    border-radius: 8px;
+
+    /* hover setup */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.helicopter img {
+    width: 470px;
+    height: 200px;
+    object-fit: cover;
+
+    /* image hover */
+    transition: transform 0.3s ease;
+}
+
+.helicopter_header {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 100;
+    text-align: center;
+    color: chartreuse;
+    text-shadow:
+        -4px -4px 0 rgb(97, 0, 97),
+         2px -2px 0 #580045,
+        -2px  2px 0 #700061,
+         2px  2px 0 #700061;
+
+    transition: color 0.25s ease;
+}
+
+/* ✨ Hover effects */
+.helicopter:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.helicopter:hover img {
+    transform: scale(1);
+}
+
+.helicopter:hover .helicopter_header {
+    color:#700061;
+    text-shadow:
+        -4px -4px 0 chartreuse,
+         2px -2px 0 chartreuse,
+        -2px  2px 0 chartreuse,
+         2px  2px 0 chartreuse;
+
+    transform: scale(1.04);
+}
+
+
 .bar {
     height: 2px;
     width: 27px;
@@ -191,11 +268,14 @@ body {
     align-items: center;
     row-gap: 20px;
     padding:0;
-  
-    
-    
   }
 
+    .ratio{
+        margin-top: -20px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+   
   .nav__link {
        background-color: #2e3938;
     font-size: 14px;
@@ -225,6 +305,8 @@ body {
 
 
 
+/* Footer */
+
 .footer {
     background-color: #272420;   /* full-width background */
     width: 100%;
@@ -234,7 +316,7 @@ body {
 .footer__content {
     max-width: 1600px;
     margin: 0 auto;              /* centers content */
-    padding: 30px;               /* natural edge spacing */
+    padding: 40px 0;            /* natural edge spacing */
     color: #f7efd9;
     text-align: center;
 }
