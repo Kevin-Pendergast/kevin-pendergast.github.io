@@ -3,8 +3,8 @@ const hamburgerEl = document.querySelector('.hamburger');
 const navItemsEls = document.querySelectorAll('.nav__item');
 
 hamburgerEl.addEventListener('click', () => {
-    navEl.classList.toggle('nav--open');           // toggles nav visibility
-    hamburgerEl.classList.toggle('hamburger--open'); // toggles X animation
+    navEl.classList.toggle('nav--open');           
+    hamburgerEl.classList.toggle('hamburger--open');
 });
 
 navItemsEls.forEach(navItemEl => {
