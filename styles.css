@@ -173,8 +173,29 @@ p{
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     overflow: hidden;
 }
+.haunted {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #161515;
+    padding: 15px;
+    width: 500px;
+    border-radius: 8px;
+
+    /* hover setup */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
 
 .helicopter img {
+    width: 470px;
+    height: 200px;
+    object-fit: cover;
+
+    /* image hover */
+    transition: transform 0.3s ease;
+}
+.haunted img {
     width: 470px;
     height: 200px;
     object-fit: cover;
@@ -198,13 +219,32 @@ p{
     transition: color 0.25s ease;
 }
 
+.haunted_header {
+    font-family: 'Creepster', 'Georgia', serif; /* A spooky font */
+    color: #ff0000;
+    text-shadow: 0 0 15px rgba(228, 11, 0, 0.8);
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-weight: 100;
+    text-align: center;
+    transition: color 0.25s ease;
+}
+
 /* Hover effects */
 .helicopter:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
 }
+.haunted:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
 
 .helicopter:hover img {
+    transform: scale(1);
+}
+.haunted:hover img {
     transform: scale(1);
 }
 
@@ -218,6 +258,14 @@ p{
 
     transform: scale(1.04);
 }
+
+.haunted:hover .haunted_header {
+  color: #ff0000;
+    text-shadow: 0 0 40px rgba(228, 11, 0, 0.8);
+    transform: scale(1.04);
+    transition: all 1s ease-in-out
+}
+
 
 
 .bar {
